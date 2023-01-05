@@ -1,3 +1,6 @@
+const emptyArray = [];
+
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -22,7 +25,7 @@ module.exports = {
         res.status(200).send(randomFortuneQuotes);
     },
 
-    //Good Greeting Messages:
+    //     //Add 3 More Features:1ST: Good Greeting Messages:
     getGoodGreetings: (req, res) => {
         const greetings = ["Hello!","Hi there.", "Good morning!", "What's Up!" ];
       
@@ -33,4 +36,15 @@ module.exports = {
         res.status(200).send(randomGoodGreetings);
     },
 
+    //Add 3 More Features: 2ND - 
+    getUserInput: (req,res) => {
+        const userInput = req.body.value;
+        emptyArray.push(userInput)
+
+        res.status(200).send(userInput)
+    },
+
+    //Add 3 More Features: 3RD
+
+    getAllUserInputs
 }

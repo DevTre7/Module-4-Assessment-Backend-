@@ -38,3 +38,16 @@ const getGoodGreetings = () => {
 goodGreetingsButton.addEventListener('click', getGoodGreetings)
 //------------------------------------------------------------------------
 
+const inputSpace = document.getElementById("input_space");
+const inputButton = document.getElementById("input_btn");
+
+const handleInput = () =>{
+    console.log(inputSpace.value)
+    axios.post("http://localhost:4000/api/addUserInput/", {value: inputSpace.value})
+        .then(res => {
+            const data = res.data;
+            alert(data);
+        })
+}
+
+inputButton.addEventListener('click', handleInput)
