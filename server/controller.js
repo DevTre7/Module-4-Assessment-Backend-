@@ -1,3 +1,6 @@
+//This array serves as a placeholder at the beginning of this backend, yet will be later filled with elements
+//created by the 'userInput' POST request. After the inputs are put into the array it will later be called by
+//the "getAllUserInputs" GET request
 const emptyArray = [];
 
 
@@ -45,6 +48,8 @@ module.exports = {
     },
 
     //Add 3 More Features: 3RD
-
-    getAllUserInputs
+    getAllUserInputs: (req, res) => {
+        console.log(emptyArray)
+        res.status(200).send(emptyArray)
+    }
 }

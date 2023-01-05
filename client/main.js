@@ -10,7 +10,7 @@ const getCompliment = () => {
 
 complimentBtn.addEventListener('click', getCompliment)
 //------------------------------------------------------------------------
-
+//Add a New Feature - "fortunesButton":
 const fortunesButton = document.getElementById("fortunesButton")
 
 const getFortunes = () => {
@@ -23,8 +23,7 @@ const getFortunes = () => {
 
 fortunesButton.addEventListener('click', getFortunes)
 //------------------------------------------------------------------------
-//Part 3: add 3 More Features:
-
+//Part 3: add 3 More Features: "Greetings Button":
 const goodGreetingsButton = document.getElementById("greetings")
 
 const getGoodGreetings = () => {
@@ -37,6 +36,7 @@ const getGoodGreetings = () => {
 
 goodGreetingsButton.addEventListener('click', getGoodGreetings)
 //------------------------------------------------------------------------
+//Part 3: add 3 More Features: "Input Space & Input Button":
 
 const inputSpace = document.getElementById("input_space");
 const inputButton = document.getElementById("input_btn");
@@ -51,3 +51,14 @@ const handleInput = () =>{
 }
 
 inputButton.addEventListener('click', handleInput)
+//------------------------------------------------------------------------
+const getAllUserInputsButton = document.getElementById("get_all_users")
+
+const getAllUserInputs = () => {
+    axios.get("http://localhost:4000/api/getAllUsers/")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+        });
+}
+
